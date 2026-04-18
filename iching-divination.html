@@ -185,7 +185,7 @@
     <button class="mode-btn" onclick="setMode('wealth')" id="btn-wealth"><span class="mode-icon">💰</span><span class="mode-name">財運</span><span class="mode-sub">財富指引</span></button>
   </div>
   <div class="mode-grid-3">
-    <button class="mode-btn" onclick="setMode('wuxing')" id="btn-wuxing"><span class="mode-icon">五</span><span class="mode-name">五行陣</span><span class="mode-sub">金木水火土</span></button>
+    <button class="mode-btn" onclick="setMode('wuxing')" id="btn-wuxing"><span class="mode-icon">五</span><span class="mode-name">五行陣</span><span class="mode-sub">木火土金水</span></button>
     <button class="mode-btn" onclick="setMode('exam')" id="btn-exam"><span class="mode-icon">📚</span><span class="mode-name">考運</span><span class="mode-sub">學業考試</span></button>
   </div>
 
@@ -428,7 +428,7 @@ const spreads = {
     positions:[{label:"財運現況",meaning:"目前財務能量與機會"},{label:"財富關鍵",meaning:"影響財運的核心因素"},{label:"財運建言",meaning:"財務決策方向與建議"}],
     render(c){return `<div class="grid-3">${c.map((x,i)=>card(x,this.positions[i],i)).join("")}</div>`;}},
   wuxing:{title:"五行陣",count:5,hint:"請具體寫下單一問題，在心中默念三次後起卦",placeholder:"例如：我目前的事業運勢如何？",
-    positions:[{label:"火｜南",meaning:"熱情、行動力、貴人",gp:"pos-top"},{label:"木｜東",meaning:"生長、規劃、新開始",gp:"pos-left"},{label:"土｜中",meaning:"核心問題、自身狀態",gp:"pos-center"},{label:"金｜西",meaning:"決斷、收穫、財運",gp:"pos-right"},{label:"水｜北",meaning:"智慧、潛力、隱藏因素",gp:"pos-bottom"}],
+    positions:[{label:"木｜東",meaning:"生長、規劃、新開始",gp:"pos-top"},{label:"火｜南",meaning:"熱情、行動力、貴人",gp:"pos-left"},{label:"土｜中",meaning:"核心問題、自身狀態",gp:"pos-center"},{label:"金｜西",meaning:"決斷、收穫、財運",gp:"pos-right"},{label:"水｜北",meaning:"智慧、潛力、隱藏因素",gp:"pos-bottom"}],
     render(c){return `<div class="grid-5">${c.map((x,i)=>card(x,this.positions[i],i,this.positions[i].gp||"")).join("")}</div>`;}},
   exam:{title:"考運指引",count:3,hint:"請具體寫下單一考試問題，在心中默念三次後起卦",placeholder:"例如：我這次○○考試的考運如何？（只問考運，不交叉問準備狀況）",
     positions:[{label:"準備狀態",meaning:"目前學習與備考能量"},{label:"考試關鍵",meaning:"需要特別注意的重點"},{label:"考運走向",meaning:"考試結果趨勢與建議"}],
